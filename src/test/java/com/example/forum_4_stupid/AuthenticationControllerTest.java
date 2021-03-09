@@ -3,12 +3,10 @@ package com.example.forum_4_stupid;
 import java.net.URI;
 import java.net.URISyntaxException;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
@@ -20,7 +18,7 @@ import com.example.forum_4_stupid.repository.UsersRepository;
 import com.example.forum_4_stupid.service.AuthService;
 import com.example.forum_4_stupid.service.JwtProvider;
 
-@RunWith(SpringRunner.class)
+
 @WebMvcTest(AuthenticationController.class)
 public class AuthenticationControllerTest {
 	

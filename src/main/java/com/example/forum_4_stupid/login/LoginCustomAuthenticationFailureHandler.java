@@ -1,17 +1,13 @@
 package com.example.forum_4_stupid.login;
 
-import java.io.IOException;
-
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
+import com.example.forum_4_stupid.LoggerClass;
 import org.apache.logging.log4j.Level;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
 
-import com.example.forum_4_stupid.LoggerClass;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @Component
 public class LoginCustomAuthenticationFailureHandler implements AuthenticationSuccessHandler{
@@ -25,7 +21,7 @@ public class LoginCustomAuthenticationFailureHandler implements AuthenticationSu
 
 	@Override
 	public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
-			Authentication authentication) throws IOException, ServletException {
+			Authentication authentication) {
 		LoggerClass.getLogger(LoginCustomAuthenticationFailureHandler.class).log(Level.INFO, "Authentication failed");		
 	}
 

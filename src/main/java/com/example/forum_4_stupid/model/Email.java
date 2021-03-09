@@ -1,13 +1,6 @@
 package com.example.forum_4_stupid.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 public class Email {
@@ -21,7 +14,7 @@ public class Email {
 	private String email;
 	
 	@ManyToOne(fetch = FetchType.LAZY, targetEntity = Users.class)
-	@JoinColumn(nullable = true, name = "userKey", referencedColumnName = "user_ids")
+	@JoinColumn(name = "userKey", referencedColumnName = "user_ids")
 	private Users user;
 	
 	public Integer getId() {

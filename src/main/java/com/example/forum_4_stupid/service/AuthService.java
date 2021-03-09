@@ -1,7 +1,10 @@
 package com.example.forum_4_stupid.service;
 
-import java.time.Instant;
-
+import com.example.forum_4_stupid.dto.LoginRequest;
+import com.example.forum_4_stupid.dto.RegisterRequest;
+import com.example.forum_4_stupid.exceptions.AccountAlreadyExistsException;
+import com.example.forum_4_stupid.model.Users;
+import com.example.forum_4_stupid.repository.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -13,11 +16,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.example.forum_4_stupid.dto.LoginRequest;
-import com.example.forum_4_stupid.dto.RegisterRequest;
-import com.example.forum_4_stupid.exceptions.AccountAlreadyExistsException;
-import com.example.forum_4_stupid.model.Users;
-import com.example.forum_4_stupid.repository.UsersRepository;
+import java.time.Instant;
 
 @EnableTransactionManagement
 @Service

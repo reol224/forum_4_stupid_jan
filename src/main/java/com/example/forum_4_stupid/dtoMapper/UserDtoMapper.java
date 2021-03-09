@@ -1,14 +1,14 @@
 package com.example.forum_4_stupid.dtoMapper;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
 import com.example.forum_4_stupid.dto.RegisterRequest;
 import com.example.forum_4_stupid.dto.UserDTO;
 import com.example.forum_4_stupid.dtoMapper.interfaces.UserDTOMapper;
 import com.example.forum_4_stupid.model.Users;
 import com.example.forum_4_stupid.service.AuthService;
 import com.example.forum_4_stupid.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 
 @Component
 public class UserDtoMapper implements UserDTOMapper<UserDTO,RegisterRequest,Users>{

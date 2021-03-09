@@ -1,16 +1,15 @@
 package com.example.forum_4_stupid.dtoMapper;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
 import com.example.forum_4_stupid.dto.EmailDTO;
 import com.example.forum_4_stupid.dto.EmailRequest;
 import com.example.forum_4_stupid.dtoMapper.interfaces.EmailDTOMapper;
 import com.example.forum_4_stupid.model.Email;
 import com.example.forum_4_stupid.service.EmailService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Component
 public class EmailDtoMapper implements EmailDTOMapper<EmailDTO, EmailRequest, Email>{

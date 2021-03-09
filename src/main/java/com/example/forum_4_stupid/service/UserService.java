@@ -1,15 +1,14 @@
 package com.example.forum_4_stupid.service;
 
-import java.util.NoSuchElementException;
-
+import com.example.forum_4_stupid.exceptions.AccountDoesNotExistException;
+import com.example.forum_4_stupid.model.Users;
+import com.example.forum_4_stupid.repository.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.example.forum_4_stupid.exceptions.AccountDoesNotExistException;
-import com.example.forum_4_stupid.model.Users;
-import com.example.forum_4_stupid.repository.UsersRepository;
+import java.util.NoSuchElementException;
 
 @Service
 @EnableTransactionManagement

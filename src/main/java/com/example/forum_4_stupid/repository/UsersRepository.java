@@ -1,10 +1,9 @@
 package com.example.forum_4_stupid.repository;
 
-import java.util.Optional;
-
+import com.example.forum_4_stupid.model.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.example.forum_4_stupid.model.Users;
+import java.util.Optional;
 
 public interface UsersRepository extends JpaRepository<Users, Integer> {
 

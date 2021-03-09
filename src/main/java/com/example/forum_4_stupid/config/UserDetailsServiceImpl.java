@@ -1,10 +1,7 @@
 package com.example.forum_4_stupid.config;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.NoSuchElementException;
-
+import com.example.forum_4_stupid.model.Users;
+import com.example.forum_4_stupid.repository.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -12,8 +9,10 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
-import com.example.forum_4_stupid.model.Users;
-import com.example.forum_4_stupid.repository.UsersRepository;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.NoSuchElementException;
 
 public class UserDetailsServiceImpl implements UserDetailsService {
 	

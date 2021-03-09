@@ -1,13 +1,12 @@
 package com.example.forum_4_stupid.dtoMapper;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
 import com.example.forum_4_stupid.dto.TodoDTO;
 import com.example.forum_4_stupid.dto.TodoRequest;
 import com.example.forum_4_stupid.dtoMapper.interfaces.TodoDTOMapper;
 import com.example.forum_4_stupid.model.Todos;
 import com.example.forum_4_stupid.service.TodoService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 @Component
 public class TodoDtoMapper implements TodoDTOMapper<TodoDTO,TodoRequest,Todos>{
@@ -30,7 +29,6 @@ public class TodoDtoMapper implements TodoDTOMapper<TodoDTO,TodoRequest,Todos>{
 	@Override
 	public void delete(Todos entity) {
 		// TODO Auto-generated method stub
-		
 	}
 
 	@Override

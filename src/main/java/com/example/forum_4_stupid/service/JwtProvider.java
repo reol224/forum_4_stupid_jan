@@ -1,17 +1,16 @@
 package com.example.forum_4_stupid.service;
 
-import java.util.Date;
-
+import com.example.forum_4_stupid.dto.LoginRequest;
+import com.example.forum_4_stupid.dto.RegisterRequest;
+import com.example.forum_4_stupid.filter.JwtKeys;
+import com.example.forum_4_stupid.model.Users;
+import com.example.forum_4_stupid.repository.UsersRepository;
+import io.jsonwebtoken.Jwts;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.example.forum_4_stupid.JwtKeys;
-import com.example.forum_4_stupid.dto.LoginRequest;
-import com.example.forum_4_stupid.dto.RegisterRequest;
-import com.example.forum_4_stupid.model.Users;
-import com.example.forum_4_stupid.repository.UsersRepository;
+import java.util.Date;
 
-import io.jsonwebtoken.Jwts;
 @Component
 public class JwtProvider {
 	

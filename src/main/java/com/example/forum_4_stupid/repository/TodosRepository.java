@@ -1,10 +1,9 @@
 package com.example.forum_4_stupid.repository;
 
-import java.util.Optional;
-
+import com.example.forum_4_stupid.model.Todos;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.example.forum_4_stupid.model.Todos;
+import java.util.Optional;
 
 public interface TodosRepository extends JpaRepository<Todos, Integer>{
 

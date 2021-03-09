@@ -1,15 +1,5 @@
 package com.example.forum_4_stupid.service;
 
-import java.util.List;
-import java.util.NoSuchElementException;
-
-import org.apache.logging.log4j.Level;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataIntegrityViolationException;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.springframework.transaction.annotation.Transactional;
-
 import com.example.forum_4_stupid.LoggerClass;
 import com.example.forum_4_stupid.dto.EmailRequest;
 import com.example.forum_4_stupid.exceptions.EmailAlreadyExistsException;
@@ -17,6 +7,15 @@ import com.example.forum_4_stupid.exceptions.EmailNotFoundByUsernameException;
 import com.example.forum_4_stupid.model.Email;
 import com.example.forum_4_stupid.repository.EmailRepository;
 import com.example.forum_4_stupid.repository.UsersRepository;
+import org.apache.logging.log4j.Level;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.NoSuchElementException;
 
 @Service
 @EnableTransactionManagement

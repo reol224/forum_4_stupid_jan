@@ -1,5 +1,10 @@
 package com.example.forum_4_stupid.controller;
 
+import com.example.forum_4_stupid.dto.LoginRequest;
+import com.example.forum_4_stupid.dto.RegisterRequest;
+import com.example.forum_4_stupid.dtoMapper.UserDtoMapper;
+import com.example.forum_4_stupid.service.AuthService;
+import com.example.forum_4_stupid.service.JwtProvider;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -7,13 +12,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.view.RedirectView;
-
-import com.example.forum_4_stupid.dto.LoginRequest;
-import com.example.forum_4_stupid.dto.RegisterRequest;
-import com.example.forum_4_stupid.dtoMapper.UserDtoMapper;
-import com.example.forum_4_stupid.service.AuthService;
-import com.example.forum_4_stupid.service.JwtProvider;
 
 @RestController
 @RequestMapping("/auth")
