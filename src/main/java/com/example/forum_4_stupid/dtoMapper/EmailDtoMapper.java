@@ -30,7 +30,7 @@ public class EmailDtoMapper implements EmailDTOMapper<EmailDTO, EmailRequest, Em
 	@Override
 	public List<EmailDTO> getAllEmailByUsersUsername(String username) {
 		List<EmailDTO> responseDTO = new ArrayList<>();
-		List<Email> email = getEmailByOwnerUsername(username);
+		List<Email> email = emailService.getAllEmaiLFromUserByUsername(username);
 		
 		for (Email emails : email) {
 			var emailDTO = new EmailDTO();
@@ -45,7 +45,7 @@ public class EmailDtoMapper implements EmailDTOMapper<EmailDTO, EmailRequest, Em
 	@Override
 	public List<EmailDTO> getAllEmailByUsersId(Integer id) {
 		List<EmailDTO> responseDTO = new ArrayList<>();
-		List<Email> email = getEmailByUsersId(String.valueOf(id));
+		List<Email> email = emailService.getAllEmailFromUserByUserId(id);
 		
 		for (Email emails : email) {
 			var emailDTO = new EmailDTO();
@@ -57,28 +57,14 @@ public class EmailDtoMapper implements EmailDTOMapper<EmailDTO, EmailRequest, Em
 		return responseDTO;
 	}
 	
-//	private Email getEmailById(Integer id) {
-//		Email email = emailService.get(id);
-//		
-//		return email;
-//	}
-//	
-	private List<Email> getEmailByUsersId(String id) {
-		List<Email> email = emailService.getAllEmailFromUserByUserId(id);
-		
-		return email;
-	}
-	
-	private List<Email> getEmailByOwnerUsername(String username) {
-		List<Email> email =  emailService.getAllEmaiLFromUserByUsername(username);
-		
-		return email;
-	}
-
 	@Override
 	public EmailDTO getById(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		Email email = emailService.getEmailById(id);
+		var emailDTO = new EmailDTO();
+		emailDTO.setId(email.getId());
+		emailDTO.setEmail(email.getEmail());
+		
+		return emailDTO;
 	}
 
 }

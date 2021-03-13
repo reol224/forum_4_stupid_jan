@@ -32,9 +32,7 @@ build/
 .vscode/
 
 .mvn/
-*.log
 mvnw
 mvnw.cmd
-/src/main/com/example/forum_4_stupid/JwtKeys
 
 
