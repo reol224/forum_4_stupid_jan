@@ -1,5 +1,12 @@
 package com.example.forum_4_stupid.dtoMapper;
 
+<<<<<<< HEAD
+=======
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;;
+>>>>>>> 2373714898f99d4dfd5177b4b027317ec2c350e3
 import com.example.forum_4_stupid.dto.TodoDTO;
 import com.example.forum_4_stupid.dto.TodoRequest;
 import com.example.forum_4_stupid.dtoMapper.interfaces.TodoDTOMapper;
@@ -38,10 +45,13 @@ public class TodoDtoMapper implements TodoDTOMapper<TodoDTO,TodoRequest,Todos>{
 	@Override
 	public void delete(Todos entity) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 		// TODO Auto-generated method stub
 =======
 		
 >>>>>>> ce06a0e53cbd4853f97e18f49e47c19e72d8d24f
+=======
+>>>>>>> 2373714898f99d4dfd5177b4b027317ec2c350e3
 	}
 
 	@Override

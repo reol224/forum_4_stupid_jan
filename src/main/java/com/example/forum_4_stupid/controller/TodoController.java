@@ -9,7 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
->>>>>>> ce06a0e53cbd4853f97e18f49e47c19e72d8d24f
 
 @RestController
 @RequestMapping("/api/todo")
