@@ -46,9 +46,29 @@ public class TodoService {
 	}
 	
 	@Transactional(readOnly = true)
-	public Todos findTodosByOwnerId (Integer id) {
+	public List<Todos> findAllTodosByOwnerId(Integer id) {
 		try {
-			Todos todo = todosRepository.findByUser_Id(id).get();
+			List<Todos> todo = todosRepository.findByUser_Id(id);
+			return todo;			
+		} catch (NoSuchElementException e) {
+			throw new TodoNotFoundException("Todo Does Not Exist");
+		}
+	}
+	
+	@Transactional(readOnly = true)
+	public List<Todos> findAllTodosByOwnerUsername(String username) {
+		try {
+			List<Todos> todo = todosRepository.findByUser_Username(username);
+			return todo;			
+		} catch (NoSuchElementException e) {
+			throw new TodoNotFoundException("Todo Does Not Exist");
+		}
+	}
+	
+	@Transactional(readOnly = true)
+	public Todos findTodosById(Integer id) {
+		try {
+			Todos todo = todosRepository.findById(id).get();
 			return todo;			
 		} catch (NoSuchElementException e) {
 			throw new TodoNotFoundException("Todo Does Not Exist");
